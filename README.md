@@ -73,7 +73,7 @@ And then we build the Docker container by running the following command:
 ```
 Finally, to verify that the Docker container was built successfully, we can run the following command:
 ```bash
-docker run --rm python-app /usr/local/anaconda/envs/spider-cf/bin/python <YOUR_PYTHON_COMMAND>
+docker run --rm python-app /usr/local/anaconda/envs/spider-cf/bin/python -c "import tensorflow as tf; print(tf.__version__)"
 ```
 
 ### 3. Singularity Container
@@ -87,5 +87,5 @@ And then we build the Singularity container by running the following command:
 ```
 Finally, to verify that the Singularity container was built successfully, we can run the following command:
 ```bash
-singularity exec hpccm_demo.sif /usr/local/anaconda/envs/spider-cf/bin/python <YOUR_PYTHON_COMMAND>
+singularity exec hpccm_demo.sif /usr/local/anaconda/envs/spider-cf/bin/python -c "import tensorflow as tf; print(tf.__version__)"
 ```
